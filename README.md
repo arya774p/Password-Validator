@@ -7,6 +7,13 @@ Create a password validator that:
 - Keep prompting the user until a valid password is entered
 - Print a message to the user indicating the password is valid
 
+### Approach
+- Take a password from the user
+- Do the validation checks, without loops, for a single run
+- If the password is valid, print a message to the user
+- After the first run, make it dynamic
+
+
 ### Validation checks:
 - Password should be at least 8 characters long
 - Password should be at most 20 characters long
