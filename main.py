@@ -3,14 +3,14 @@
 password=input("Enter a password : ")
 
 if len(password) >= 8:
-    print("first validation checked")
+    print("Atleast 8 digit validation checked")
 
 if len(password) <= 20:
-    print("second validation checked")
+    print("Atmost 20 digit validation checked")
 
 # Password should not contain any whitespace
 if ' ' not in password:
-    print("whitespace validation checked")
+    print("no whitespace validation checked")
 
 # Password should not contain the word ‘password’ (case-insensitive)
 if 'password' not in password.lower():
@@ -47,3 +47,12 @@ if has_digit:
     print("atleast one digit validation checked")
 
 # Password should contain at least one special character (!, @, #, $, %, ^, &, *, (, ), _, +, =, {, }, [, ], |, \, :, ;, ", ', <, >, ,, ., ?, /)
+
+special_chars = """!@#$%^&*()_+=}{][|\:;"'<>,.?/"""
+has_special = False
+for char in password:
+    if char in special_chars :
+        has_special = True
+        break
+if has_special :
+    print("contains special characters")
